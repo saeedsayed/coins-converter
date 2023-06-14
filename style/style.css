@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(../img/coins.jpg);
+}
+.lieyr{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.396);
+}
+.container{
+    max-width: 90%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.288);
+    font-size: 2rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid #fff;
+}
+.container h1{
+    color: #cfcfcf;
+}
+.container .input-row input{
+padding: 15px;
+font-size: 1.5rem;
+margin: 30px 5px;
+border-radius: 1rem;
+border: none;
+background-color: #f1f2f5;
+max-width: 100%;
+}
+.container .input-row input:nth-child(1):hover{
+    background-color: #cfcfcf;
+}
+.currency-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.currency-row .from,
+.currency-row .to{
+    flex: 1;
+    font-size: 1rem;
+    min-width: 200px;
+}
+.currency-row .from select,
+.currency-row .to select{
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    margin: 30px 0;
+    cursor: pointer;
+}
+.currency-row .from select:focus,
+.currency-row .to select:focus{
+    outline: none;
+}
+.currency-row .from select:hover,
+.currency-row .to select:hover{
+    background-color: #f1f2f5;
+}
+.currency-row .switch{
+    align-self: self-start;
+    cursor: pointer;
+    width: 50px;
+    min-width: 50px;
+    margin: 0 auto;
+    transition: .5s;
+}
+.currency-row .switch.on{
+    rotate: 180deg;
+}
+@media (max-width:670px) {
+    .container .input-row input{
+        width: 90%;
+    }
+    .container .input-row svg{
+        display: block;
+        margin: auto;
+    }
+    .currency-row{
+        flex-direction: column;
+    }
+    .currency-row .from,
+    .currency-row .to{
+        width: 90%;
+    }
+}
